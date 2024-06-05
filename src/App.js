@@ -13,7 +13,6 @@ const App = () => {
         profession: "",
         phone: "",
         email: "",
-        id: "",
         img: "",
     });
     const [data, setData] = useState([]);
@@ -21,12 +20,12 @@ const App = () => {
     return (
         <>
             <Header />
-            <DataContext.Provider value={{ view, setView, data, setData, ID, setID }}>
+            <DataContext.Provider.Provider value={{ view, setView, data, setData, ID, setID }}>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/cardDetails" element={<CardDetails />}></Route>
                 </Routes>
-            </DataContext.Provider>
+            </DataContext.Provider.Provider>
             <Footer />
         </>
     );
